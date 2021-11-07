@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Righteous', cursive;
+
+}
+
+.wrapper2 {
+    background: rgba(51, 51, 51, 0.80);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+}
+
+.wrapper1 {
+    background-image: url('img/bgc.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    opacity: 30%;
+
+}
+
+img {
+    width: 140px;
+    height: 140px;
+    display: block;
+    margin-right: 30px;
+}
+
+header {
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+
+}
+
+.logo {
+    margin-left: 50px;
+    margin-top: 15px;
+    font-size: 45px;
+}
+
+span {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+header button {
+    font-size: 45px;
+    height: 65px;
+    width: 240px;
+    border-radius: 20px;
+    margin-right: 50px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(89.74deg, #212121 15.4%, #FF0000 111.41%);
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    align-items: center;
+
+}
+
+main section {
+    height: 60vh;
+    flex-basis: 20%;
+    background-color: #fff;
+    border-radius: 20px;
+    margin: 70px;
+    background: rgba(51, 51, 51, 0.6);
+    box-shadow: 0px 8px 4px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+
+}
+
+footer {
+    height: 5vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    color: #333333BD;
+
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+section h2 {
+    font-size: 35px;
+    color: #E90000;
+
+
+}
+
+section p {
+    font-size: 28px;
+
+
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    width: 40%;
+}
+
+section button {
+    font-size: 35px;
+    background-color: #E90000;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    border-radius: 20px;
+    height: 45px;
+
+}

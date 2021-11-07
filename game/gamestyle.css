@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Righteous', cursive;
+}
+
+body {
+    background: linear-gradient(349.83deg, #555454 18.34%, rgba(28, 6, 6, 0) 107.07%);
+    widtH: 100%;
+    height: 100vh;
+}
+
+header img {
+
+    width: 140px;
+    height: 140px;
+    display: block;
+    margin-right: 30px;
+
+}
+
+header h1 {
+    color: #E90000;
+    font-size: 60px;
+}
+
+
+
+.logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 25px;
+    color: #333333BD;
+}
+
+a {
+    text-decoration: none;
+}

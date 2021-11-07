@@ -1,0 +1,158 @@
+h2 {
+    margin: .25rem;
+}
+
+div.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70vh;
+    justify-content: space-between;
+
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+button {
+    padding: 1rem;
+    background-color: skyblue;
+}
+
+#coin {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+    margin: 2rem 0rem;
+    transform-style: preserve-3d;
+
+}
+
+#coin div {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    backface-visibility: hidden;
+    background-size: contain;
+    position: absolute;
+}
+
+.heads {
+    background-image: url('https://zst.pila.pl/wp-content/themes/ZSTTheme/images/logo.png');
+}
+
+.animate-heads {
+    animation: flipHeads 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipHeads {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(1800deg);
+    }
+}
+
+.tails {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzSojrVBT_ytmH0I8YNWDZnamLuAw6JIHm0K3ua8DxVR3LdXIebt5A2-vAFD6mIqevUus&usqp=CAU");
+    transform: rotateY(-180deg);
+}
+
+.animate-tails {
+    animation: flipTails 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes flipTails {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(1620deg);
+    }
+}
+
+main {
+    margin-top: 100px;
+}
+
+#flip {
+    background-color: transparent;
+    border: none;
+}
+
+i {
+    font-size: 70px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+.chose {
+    width: 140px;
+    height: 70px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.chose div:nth-child(1) {
+    background-color: black;
+}
+
+.chose div:nth-child(2) {
+    background-color: #ff0000;
+}
+
+.chose div {
+    flex-basis: 48%;
+    height: 100%;
+    cursor: pointer;
+}
+
+p {
+    font-size: 25px;
+}
+
+.red,
+#tailsCount {
+    color: #ff0000;
+}
+
+.button div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.button div input {
+    height: 35px;
+    border-radius: 10px;
+    border: 1px solid #ff0000;
+    background-color: transparent;
+    color: #ff0000;
+    margin-top: 25px;
+    outline: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+div input::placeholder {
+    color: #ff0000;
+    font-size: 20px;
+    text-align: center;
+}
