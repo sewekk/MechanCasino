@@ -9,11 +9,11 @@
         require_once 'dbh.inc.php';
         require_once 'functions.inc.php';
 
-        if(emptyInputSignup($name, $email, $pwd, $pwdRepeat)!== false){
+        if(emptyInputSignup($username, $email, $pwd, $pwdRepeat)!== false){
             header('location: ../register.html?error=emptyinput');
             exit();
         }
-        if(InvalidUserName($name)!== false){
+        if(InvalidUserName($username)!== false){
             header('location: ../register.html?error=invalidusername');
             exit();
         }
@@ -25,7 +25,7 @@
             header('location: ../register.html?error=passworddontmach');
             exit();
         }
-        if(usernameExists($conn, $username)!== false){
+        if(usernameExists($conn, $username, $email)!== false){
             header('location: ../register.html?error=userexists');
             exit();
         }
