@@ -80,10 +80,46 @@
         mysqli_stmt_bind_param($stmt, "sss", $username,$email,$hashedPwd);
          mysqli_stmt_execute($stmt);
          mysqli_stmt_close($stmt);
-         header('location: ../login.html?error=none');
+         header('location: ../login.php?error=none');
          exit();
          
      }
+     function emptyInputLogin($username, $pwd){
+        $result;
+        if(empty($username) || empty($pwd)){
+            $result = true;
+        }
+        else{
+            $result = false;
+        }
+        return $result;
+    }
+
+    function loginUser($conn, $username, $pwd){
+    $userExists = usernameExists($conn, $username, $username);
+
+    if($userExists === false){
+        header('location: ../login.php?error=wronglogin');
+        exit();
+    }
+    $pwdHashed = $userExists["userpwd"];
+    $checkPwd = password_verify($pwd,$pwdHashed);
+
+    if($checkPwd=== false){
+        header('location: ../login.php?error=wrongpassword');
+        exit();
+    }
+    else if($checkPwd === true){
+        session_start();
+        $_SESSION['userid'] = $userExists["userId"]; 
+        $_SESSION['username'] = $userExists["username"];
+        header("location:../game1.html");
+        exit(); 
+
+    }
+
+    }
+
 
 
 ?>

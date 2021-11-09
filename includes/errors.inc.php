@@ -1,4 +1,5 @@
 <?php
+            
                 if(isset($_GET["error"])){
                     if($_GET["error"]== "emptyinput"){
                         echo "<p>Nie wypełniłeś wszystkich pól</p>";
@@ -15,5 +16,17 @@
                     else if($_GET["error"]== "userexists"){
                         echo "<p>Nazwa użytkownika lub email zostaly już użyte</p>";
                     }
+                    else if($_GET["error"]== "emptyinput"){
+                        echo "<p>Nie wypełniłeś wszystkich pól</p>";
+                    }
+                    else if($_GET["error"]== "wronglogin"){
+                        echo "<p>Nie ma takiego użytkownika</p>";
+                    }
+                    else if($_GET["error"]== "wrongpassword"){
+                        echo "<p>Podałeś błędne hasło</p>";
+                    }
+                    
+                    
                 }
+                
             ?>

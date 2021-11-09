@@ -14,15 +14,18 @@
 </head>
 
 <body>
+    <?php
+        include_once('includes/errors.inc.php');
+    ?>
     <section>
         <a href="index.html">
             <h1>Mechan<span> Casino</span></h1>
         </a>
         <h3>Zaloguj się do swojego konta</h3>
-        <form>
+        <form action="includes/login.inc.php" method="POST">
             <input type="text" placeholder="Username" name="username">
             <input type="password" placeholder="Password" name="password">
-            <button type="submit">Log In</button>
+            <button type="submit" name="submit">Log In</button>
         </form>
         <h3>Nie masz konta?</h3>
         <a href="register.php"><button>Załóż konto</button></a>

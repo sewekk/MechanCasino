@@ -32,7 +32,7 @@
         </form>
             
         <h3>Nie masz konta?</h3>
-        <a href="login.html"><button>Zaloguj się</button></a>
+        <a href="login.php"><button>Zaloguj się</button></a>
     </section>
 </body>
 
