@@ -24,15 +24,10 @@
                     </span>
             </div>
             <div class="login">
-                    <?php
-                    session_start();
-                        if (isset($_SESSION['userid'])) {
-                            echo "<a href='includes/logout.inc.php'><button>Wyloguj się</button></a>";
-                        }
-                        else {
-                            echo "<a href='includes/login.inc.php'><button>Zaloguj się</button></a>";
-                        }
-                    ?>
+                  <?php
+                        include_once('includes/errors.inc.php');
+                        loged();
+                  ?>
                 
             </div>
         </header>
@@ -42,7 +37,7 @@
                 <p>
                     Maszyna hazardowa dobierająca losowe konfiguracje różnych symboli. Wygrana następuje w momencie ułożenia się w jednym rzędzie identycznych znaków.
                 </p>
-                <a href="game1.html">
+                <a href="game1.php">
                     <button>
                             Zagraj!
                         </button>
@@ -53,7 +48,7 @@
                 <p>
                     Pseudolosowa, często hazardowa gra, grana w większości kasyn. Są dwa systemy ruletki: europejski i amerykański. Suma wszystkich liczb w ruletce daje 666, stąd określenie ''szatańska gra''.
                 </p>
-                <a href="game2.html">
+                <a href="game2.php">
                     <button>
                             Zagraj!
                         </button>
@@ -64,7 +59,7 @@
                 <p>
                     Rzut monetą – popularna metoda rozstrzygania sporów lub wyboru jednej z dwóch możliwości za pomocą monety. Polega na przypisaniu możliwości do dwóch stron monety i rzuceniu monety w powietrze.
                 </p>
-                <a href="game3.html">
+                <a href="game3.php">
                     <button>
                             Zagraj!
                         </button>

@@ -1,4 +1,6 @@
-let money = 200;
+let money = document.querySelector('.money').textContent;
+parseFloat(money);
+console.log(money);
 document.querySelector('.logo h1:nth-child(3)').textContent = `Ilość Pieniędzy: ${money}`;
 
 const items = [...document.querySelectorAll('.chose div')].forEach(item  =>{

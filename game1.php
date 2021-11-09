@@ -16,14 +16,19 @@
 
 <body>
     <header>
-        <div class="logo">
-
+        <div class="logo"> 
             <img src="img/logo.png">
             <a href="index.html">
                 <h1>MechanCasino</h1>
             </a>
 
-            <h1 class="wallet">Ilość Pieniędzy:000</h1>
+            <h1 class="wallet"><span class="money">
+                <?php
+                    include_once('includes/errors.inc.php');
+                    money();
+                ?>
+                </span>
+            </h1>
         </div>
     </header>
     <main>

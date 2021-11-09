@@ -1,5 +1,6 @@
 <?php
-            
+            session_start();
+            function error(){
                 if(isset($_GET["error"])){
                     if($_GET["error"]== "emptyinput"){
                         echo "<p>Nie wypełniłeś wszystkich pól</p>";
@@ -28,5 +29,25 @@
                     
                     
                 }
+            }
+            function loged(){
                 
-            ?>
+                
+                    if (isset($_SESSION['userid'])) {
+                        echo "<a href='includes/logout.inc.php'><button>Wyloguj się</button></a>";
+                    }
+                    else {
+                        echo "<a href='includes/login.inc.php'><button>Zaloguj się</button></a>";
+                    }
+                
+            }
+            function money(){
+                if (isset($_SESSION['money'])) {
+                    echo $_SESSION['money'];
+                }
+                else{
+                    echo "200";
+                }
+            }
+                
+            

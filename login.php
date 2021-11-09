@@ -16,6 +16,7 @@
 <body>
     <?php
         include_once('includes/errors.inc.php');
+        error();
     ?>
     <section>
         <a href="index.html">

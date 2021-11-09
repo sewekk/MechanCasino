@@ -23,7 +23,14 @@
                 <h1>MechanCasino</h1>
             </a>
 
-            <h1>Ilość Pieniędzy:000</h1>
+            <h1>
+            <span class="money">
+                <?php
+                    include_once('includes/errors.inc.php');
+                    money();
+                ?>
+                </span>
+            </h1>
         </div>
     </header>
     <main>

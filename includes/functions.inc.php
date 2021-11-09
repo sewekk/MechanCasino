@@ -113,6 +113,7 @@
         session_start();
         $_SESSION['userid'] = $userExists["userId"]; 
         $_SESSION['username'] = $userExists["username"];
+        $_SESSION['money'] = $userExists["accountBalance"];
         header("location:../index.php");
         exit(); 
 
