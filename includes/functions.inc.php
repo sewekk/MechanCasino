@@ -113,7 +113,7 @@
         session_start();
         $_SESSION['userid'] = $userExists["userId"]; 
         $_SESSION['username'] = $userExists["username"];
-        header("location:../game1.html");
+        header("location:../index.php");
         exit(); 
 
     }

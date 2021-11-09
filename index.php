@@ -24,7 +24,16 @@
                     </span>
             </div>
             <div class="login">
-                <a href="login.php"><button>Zaloguj się</button></a>
+                    <?php
+                    session_start();
+                        if (isset($_SESSION['userid'])) {
+                            echo "<a href='includes/logout.inc.php'><button>Wyloguj się</button></a>";
+                        }
+                        else {
+                            echo "<a href='includes/login.inc.php'><button>Zaloguj się</button></a>";
+                        }
+                    ?>
+                
             </div>
         </header>
         <main>
