@@ -14,18 +14,39 @@
 </head>
 
 <body>
+<?php
+                if(isset($_GET["error"])){
+                    if($_GET["error"]== "emptyinput"){
+                        echo "<p>Nie wypełniłeś wszystkich pól</p>";
+                    }
+                    else if($_GET["error"]== "invalidusername"){
+                        echo "<p>Podaj prawidłowy login</p>";
+                    }
+                    else if($_GET["error"]== "invalidemail"){
+                        echo "<p>Podaj prawidłowy email</p>";
+                    }
+                    else if($_GET["error"]== "passworddontmach"){
+                        echo "<p>Podałeś różne hasła</p>";
+                    }
+                    else if($_GET["error"]== "userexists"){
+                        echo "<p>Nazwa użytkownika lub email zostaly już użyte</p>";
+                    }
+                }
+            ?>
     <section>
         <a href="index.html">
             <h1>Mechan<span> Casino</span></h1>
         </a>
+        
         <h3>Zaloguj się do swojego konta</h3>
         <form action="includes/register.php" method="POST">
             <input type="text" placeholder="Username" name="username">
             <input type="text" placeholder="E-mail" name="e-mail">
             <input type="password" placeholder="Password" name="password">
             <input type="password" placeholder="Repeat Password" name="re-password">
-            <button type="submit" name="submit">Log In</button>
+            <button type="submit" name="submit">Sign In</button>
         </form>
+            
         <h3>Nie masz konta?</h3>
         <a href="login.html"><button>Zaloguj się</button></a>
     </section>

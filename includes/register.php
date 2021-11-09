@@ -10,23 +10,23 @@
         require_once 'functions.inc.php';
 
         if(emptyInputSignup($username, $email, $pwd, $pwdRepeat)!== false){
-            header('location: ../register.html?error=emptyinput');
+            header('location: ../register.php?error=emptyinput');
             exit();
         }
         if(InvalidUserName($username)!== false){
-            header('location: ../register.html?error=invalidusername');
+            header('location: ../register.php?error=invalidusername');
             exit();
         }
         if(InvalidEmail($email)!== false){
-            header('location: ../register.html?error=invalidemail');
+            header('location: ../register.php?error=invalidemail');
             exit();
         }
         if(pwdMach($pwd, $pwdRepeat)!== false){
-            header('location: ../register.html?error=passworddontmach');
+            header('location: ../register.php?error=passworddontmach');
             exit();
         }
         if(usernameExists($conn, $username, $email)!== false){
-            header('location: ../register.html?error=userexists');
+            header('location: ../register.php?error=userexists');
             exit();
         }
         createUser($conn, $username, $email, $pwd);
