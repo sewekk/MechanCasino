@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="logo"> 
-            <img src="img/logo.png">
+            <img src="img/logo.php">
             <a href="index.html">
                 <h1>MechanCasino</h1>
             </a>

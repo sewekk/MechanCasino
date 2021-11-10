@@ -10,6 +10,8 @@
         }
         return $result;
     }
+    
+    
     function InvalidUserName($username){
         $result;
         if(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
@@ -21,6 +23,8 @@
         return $result;
         
     }
+    
+    
     function InvalidEmail($email){
         $result;
             if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
@@ -32,6 +36,8 @@
         return $result;
         
     }
+    
+    
     function pwdMach($pwd, $pwdRepeat){
         $result;
             if($pwd !== $pwdRepeat){
@@ -43,6 +49,8 @@
         return $result;
         
     }
+    
+    
     function usernameExists($conn, $username, $email){
        $result;
         $sql = "SELECT * FROM users where userName = ? Or userEmail = ?;";
@@ -118,9 +126,14 @@
         exit(); 
 
     }
-
+    }
+    function updateBalance($sql,){
+        if(isset($_SESSION['userid'])){
+                
+        }
+        else{
+            exit();
+        }
     }
 
 
-
-?>
