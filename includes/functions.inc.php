@@ -127,13 +127,8 @@
 
     }
     }
-    function updateBalance($sql,){
-        if(isset($_SESSION['userid'])){
-                
-        }
-        else{
-            exit();
-        }
-    }
+    require_once("update.inc.php");
+    
+  
 
 
