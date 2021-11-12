@@ -127,7 +127,11 @@
 
     }
     }
-    require_once("update.inc.php");
+    function getMoney($conn, $username){
+        $money = usernameExists($conn, $username, $username);
+        $_SESSION['money'] = $money['accountBalance'];
+    }
+    
     
   
 

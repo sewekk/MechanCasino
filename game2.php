@@ -27,7 +27,8 @@
             <span class="money">
                 <?php
                     include_once('includes/errors.inc.php');
-                    money();
+                    include_once('includes/dbh.inc.php');
+                    money($conn);
                 ?>
                 </span>
             </h1>
@@ -56,6 +57,8 @@
 
     </main>
     <footer>SF</footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js2/ajaxupdatedata.js"></script>
     <script src="js2/main.js"></script>
 </body>
 

@@ -1,4 +1,6 @@
 <?php
+            require_once("functions.inc.php");
+            require_once("dbh.inc.php");
             session_start();
             function error(){
                 if(isset($_GET["error"])){
@@ -31,8 +33,6 @@
                 }
             }
             function loged(){
-                
-                
                     if (isset($_SESSION['userid'])) {
                         echo "<a href='includes/logout.inc.php'><button>Wyloguj się</button></a>";
                     }
@@ -41,8 +41,9 @@
                     }
                 
             }
-            function money(){
+            function money($conn){
                 if (isset($_SESSION['money'])) {
+                    getmoney($conn,$_SESSION['username']);
                     echo $_SESSION['money'];
                 }
                 else{

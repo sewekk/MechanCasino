@@ -17,15 +17,16 @@
 <body>
     <header>
         <div class="logo"> 
-            <img src="img/logo.php">
-            <a href="index.html">
+            <img src="img/logo.png">
+            <a href="index.php">
                 <h1>MechanCasino</h1>
             </a>
 
             <h1 class="wallet"><span class="money">
                 <?php
                     include_once('includes/errors.inc.php');
-                    money();
+                    include_once('includes/dbh.inc.php');
+                    money($conn);
                 ?>
                 </span>
             </h1>
@@ -51,6 +52,8 @@
         </section>
     </main>
     <footer>SF</footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="js2/ajaxupdatedata.js"></script>
     <script src="js/wallet.js"></script>
     <script src="js/statistic.js"></script>
     <script src="js/draw.js"></script>

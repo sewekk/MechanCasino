@@ -136,6 +136,7 @@ const input  = document.querySelector('.play input');
                     document.querySelector('.logo h1:nth-child(3)').textContent = `Ilość Pieniędzy: ${money}`;
                 }
             }
+            ajaxcall(money);
             colorBeted.innerHTML = bet;
             document.body.appendChild(colorBeted);
             document.querySelector('.button').style.display = "block";

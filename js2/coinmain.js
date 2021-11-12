@@ -1,19 +1,19 @@
 
-const ajaxcall = (cash)=>{
+// const ajaxcall = (cash)=>{
     
-    let money = cash;
-    $.ajax({
-        url: 'http://localhost/mechanCasino/includes/update.inc.php',
-        method: 'POST',
-        data: `money=${money}`,
-        success: function(response) {
-            console.log(money);
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log(textStatus, errorThrown);
-        }
-    });
-};
+//     let money = cash;
+//     $.ajax({
+//         url: 'http://localhost/mechanCasino/includes/update.inc.php',
+//         method: 'POST',
+//         data: `money=${money}`,
+//         success: function(response) {
+//             console.log(money);
+//         },
+//         error: function(jqXHR, textStatus, errorThrown) {
+//             console.log(textStatus, errorThrown);
+//         }
+//     });
+// };
 
 
 let money = document.querySelector('.money').textContent;
@@ -83,7 +83,6 @@ function flipCoin() {
         return alert("wybierz kolor!");
     }
     money = money - bid;
-    console.log('teraz');
     document.querySelector('.logo h1:nth-child(3)').textContent = `Ilość Pieniędzy: ${money}`;
     document.querySelector('#flip').style.display = "none";
 

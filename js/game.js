@@ -13,6 +13,7 @@ class Game {
     }
     render(money = this.wallet.getWalletValue(), img=['logo.png','nerd.png','pila.png']){
      this.spanWallet.textContent = `Ilosc pieniędzy: ${money}`;
+     ajaxcall(money);
      this.boards.forEach((board, index) =>{
          board.innerHTML = `<img src="bandytazdjecia/${img[index]}">`;
      })
@@ -28,7 +29,6 @@ class Game {
             return alert('masz za malo srodkow lub podana zostala nieprawidlowa wartosc');
         }
         this.wallet.changeWallet(bid, "-");
-
         this.draw = new Draw();
         const imgs =  this.draw.getDrawResult();
         const win = Result.checkWinner(imgs);
